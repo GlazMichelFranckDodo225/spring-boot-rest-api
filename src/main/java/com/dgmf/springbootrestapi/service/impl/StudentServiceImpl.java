@@ -1,8 +1,11 @@
 package com.dgmf.springbootrestapi.service.impl;
 
+import org.springframework.stereotype.Service;
+
 import com.dgmf.springbootrestapi.model.Student;
 import com.dgmf.springbootrestapi.service.StudentService;
 
+@Service
 public class StudentServiceImpl implements StudentService {
 
 	@Override
@@ -17,13 +20,19 @@ public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public Student getByName(String name) {
-		// TODO Auto-generated method stub
-		return null;
+		Student student = new Student();
+		student.setId(2);
+		student.setName(name);
+		student.setMobileNo("2222222222");
+		
+		return student;
 	}
 
 	@Override
 	public boolean save(Student student) {
-		// TODO Auto-generated method stub
+		System.out.println("id : " + student.getId() + 
+				"\nName : " + student.getName() + 
+				"\nMobile No : " + student.getMobileNo());;
 		return false;
 	}
 
