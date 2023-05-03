@@ -7,8 +7,12 @@ public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public Student getById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		Student student = new Student();
+		student.setId(id);
+		student.setName("Name : " + id);
+		student.setMobileNo("1111111111");
+		
+		return student;
 	}
 
 	@Override
